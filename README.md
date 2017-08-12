@@ -24,7 +24,9 @@ Now all you need to do is run the tool! (Note: If the following seems impossible
 Installation
 ------------
 
-You will need `python` installed, as well as the `markdown` library. You can get `markdown` through `pip`, and `pip` and `python` from link:python.org[https://python.org].
+You will need `python` installed, as well as the `markdown` library. You can get `markdown` through `pip`, and `pip` and `python` from https://python.org.
+
+Next, you need to download `pronounMix.py`. You can click on "Clone or download" up above, and select the ZIP option, then just unZIP it. Or you can use `git clone https://github.com/setupminimal/pronoun-mix` if you are comfortable with git.
 
 Then, just run `python pronounMix.py StoryFile.md OutputFile.html` in a terminal.
 
