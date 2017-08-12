@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Love</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+      pronounGroups = [['he', 'him', 'his', 'He', 'Him', 'His', "he's", "He's"], ['she', 'her', 'her', 'She', 'Her', 'Her', "she's", "She's"], ['they', 'them', 'their', 'They', 'Them', 'Their', "they're", "They're"], ['ve', 'vim', 'ver', 'Ve', 'Vim', 'Ver', "ve's", "Ve's"], ['e', 'em', 'es', 'e', 'em', 'es', "em's", "em's"], ['fae', 'faer', "faer's", 'Fae', 'Faer', "Faer's", "fae's", "Fae's"]];
+      ids = ['a-', 'b-', 'v-'];
+      
+ $(function() {
+for (id = 0; id < ids.length; id++) {
+        num = Math.floor(Math.random() * (pronounGroups.length - 1))
+        pronouns = pronounGroups[num];
+        wrong = pronounGroups[(num + 5117) % pronounGroups.length]
+        
+        for (orig = 0; orig < pronounGroups.length; orig++) {
+          for (i = 0; i < pronouns.length; i++) {
+            console.log("Replacing "+ids[id]+pronounGroups[orig][i]+" with "+pronouns[i]); 
+            $("body").children().each(function() {$(this).html(function (index, old) {return old.replace(new RegExp("!"+ids[id]+pronounGroups[orig][i], 'g'), wrong[i]).replace(new RegExp(ids[id]+pronounGroups[orig][i], 'g'), pronouns[i])});})
+          }
+        }
+}
+      });
+    </script>
+  </head>
+  <body id="body"><div>
+    <h1>Love</h1>
+<p>Venkate&#347; ran v-his fingers through v-his hair, trembling slightly as v-he considered what v-he was about to do. Mastering v-his courage, v-he stepped up to the door and knocked. When the door creaked open to reveal a short child with pale green hair v-he said "Hello! Is Al&#254; home?"</p>
+<p>The child tilted b-his head, regarding Venkate&#347; with a cool stare. "a-He's not here. a-He said that you would be stopping by in a bit, but a-he had to run out for a few moments to get something. a-He was blushing a lot when a-he said it, too."</p>
+<p>"Oh! I see." Venkate&#347; cast v-his eyes around the doorway. "Um . . . could I wait inside?"</p>
+<p>"Sure." The child turned, waving Venkate&#347; inside.</p>
+<p>"Er. This is an awkward question. Are you [Below the Light of the Full Moon]? Or one of !b-his friends?"</p>
+<p>[Below] gave Venkate&#347; an incredulous look.</p></div>
+  </body>
+</html>
+
