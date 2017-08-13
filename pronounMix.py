@@ -15,7 +15,7 @@ def error(s):
 
 # The following flag determines if we want the whole webpage, or just the Javascript
 jsFlag = "--just-js" in sys.argv
-sys.argv = [x for x in sys.argv if x != "--just-js"
+sys.argv = [x for x in sys.argv if x != "--just-js"]
 
 with codecs.open(sys.argv[1], mode="r", encoding="utf-8") as f:
     text = f.read() # Read in the story's text
